@@ -71,4 +71,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'activeadmin'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'inherited_resources'
+gem "rb-readline"
