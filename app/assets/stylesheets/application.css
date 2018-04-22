@@ -127,3 +127,8 @@ ul li {
     font-size: 45px;
 }
 label { color: white}
+.col-md-offset-2{
+    background: black;
+    color: white !important;
+    padding: 50px 60px;
+}

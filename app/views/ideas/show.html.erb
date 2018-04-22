@@ -1,31 +1,35 @@
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
-    <p><%= @idea.name %></p>
-    <p><%= @idea.description %></p>
-    <p>
-      <%= link_to 'Edit', edit_idea_path(@idea) %> |
-      <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
-      <%= link_to 'Back', ideas_path %>
-      Rails Girls 2018
-    </p>
-    <h3>Comments</h3>
-    <% @comments.each do |comment| %>
-          <div>
-            <strong><%= comment.user_name %></strong>
-            <br />
-            <p><%= comment.body %></p>
-            <p><%= comment.like_count %>Likes</p>
-            <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-          </div>
-    <% end %>
+<div class="container" >
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <%= image_tag(@idea.picture_url, width: '100%') if @idea.picture.present? %>
+        <h1><%= @idea.name %></h1>
+        <p><%= @idea.description %></p>
+        <p>
+          <%= link_to 'Edit', edit_idea_path(@idea) %> |
+          <%= link_to 'Destroy', @idea, data: { confirm: 'Are you sure?' }, method: :delete %> |
+          <%= link_to 'Back', ideas_path %>
+          Rails Girls 2018
+        </p>
+        <h3>Comments ( anonymous )</h3>
+        <% @comments.each do |comment| %>
+              <div>
+                <strong><%= comment.user_name %></strong>
+                <br />
+                <p><%= comment.body %></p>
+                <br><br><br>
+                <p><%= comment.like_count %>Likes</p>
+                <br><br><br>
+                <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+              </div>
+        <% end %>
+        
+        <%= render 'comments/form' %>
     
-    <%= render 'comments/form' %>
-
-
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
-  </div>
+    
+    <%= link_to 'Edit', edit_idea_path(@idea) %> |
+    <%= link_to 'Back', ideas_path %>
+      </div>
+</div>
 
 
 
