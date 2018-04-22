@@ -1,0 +1,31 @@
+<div class="signup-box">
+    <h2 class="text-center">Sign up</h2>
+    
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+    
+      <div class="field1">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control", placeholder:'Please type your email' %>
+      </div>
+    
+      <div class="field1">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off",  class: "form-control", placeholder:'Please type your password' %>
+      </div>
+    
+      <div class="field1">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off",  class: "form-control", placeholder:'Please re-type your password' %>
+      </div>
+    
+      <div class="actions">
+        <%= f.submit "Sign up",  class: "btn btn-primary signup-btn" %>
+      </div>
+          <%= render "devise/shared/links" %>
+    <% end %>
+
+</div

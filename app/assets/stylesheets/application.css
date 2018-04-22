@@ -14,7 +14,14 @@
  *= require_self
  */
 body {
-    padding-top: 100px; 
+    padding:0;
+    margin: 0;
+    font-family: Montserrat
+}
+#bloger-header{
+    background: #000;
+    color:#fff;
+    height: 70px;
 }
 footer {
     margin-top: 100px; 
@@ -31,9 +38,74 @@ th {
 .desciption{
     color: green;
 }
-.navbar {
-    background: #000;
+ul{
+    list-style-type:none;
 }
-.navbar-default .navbar-brand {
+ul li {
+    display:inline;
+}
+#blog-menu {
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0px 8%;
+    border-bottom: 5px solid #000;
+    z-index: 5;
+}
+
+#blog-menu a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-transform: uppercase;
+  border-bottom: 3px solid white;
+}
+#blog-menu a:hover, 
+#blog-menu a.active {
+    background-color: #000;
     color: #fff;
+    border-bottom: 3px solid red;
 }
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/********************************/
+.login-box,
+.signup-box{
+    padding: 20px 50px 50px 50px;
+    background: #000;
+    width:50%;
+    margin: 50px auto;
+    color:#fff
+}
+.login-box form,
+.signup-box form{
+    padding: 0 60px;
+}
+.remember-me{
+    margin: 15px 15px 15px 0;
+}
+.helps-login,
+.helps-signup{
+    padding:20px 0;
+}
+.signup-btn{
+    margin:20px 0;
+}
+.field1{margin-top:20px;}
+.send-pass-btn{margin: 20px 0}
+.field{
+    margin: 20px 0
+}
+.field3{ padding-left:60px;}

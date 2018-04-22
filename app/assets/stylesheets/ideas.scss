@@ -1,3 +1,105 @@
 // Place all the styles related to the ideas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.blog-idea{
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;/*làm mốc cho mấy cái kia căn theo*/
+  cursor: pointer;
+  margin-left: 16px;
+}
+.blog-idea img{
+  width: 400px;
+  height: 300px;
+}
+.xam{
+  width: 400px;
+  height: 300px;
+  background-color: rgba(0,0,0,0.60);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  transition: 0.4s;
+}
+.gradient{
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  background: -webkit-linear-gradient(45deg, #22682a 0%, #9b4a1b 40%, #3a342a 100%);
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  opacity: 0;/*Opacity chỉ có tác dụng khi nhận các giá trj từ o tới 1, ko nhận % (!)*/
+  transition: 0.4s;
+}
+.hinhvuong{
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 3;
+  border: 1px solid white;
+  opacity: 0;
+  transition:0.4s;
+  transform: scale(0);
+
+}
+.chuto{
+  width: 100%;
+  font-size: 53px;
+  position: absolute;
+  top: 35%;
+  z-index: 4;
+  font-family: Arial;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  transition:0.4s;
+}
+.chunho{
+  width: 70%;
+  font-size: 27px;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  z-index: 5;
+  font-family: Times New Roman;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  transform: scale(0);
+  transition:0.4s;
+  opacity: 1;
+}
+.blog-idea img{
+  width: 400px;
+  height: 300px;
+  transform: scale(1.8);
+  transition: 0.4s;
+}
+.blog-idea:hover .chuto{
+  /*Cách 1: top: 27%;
+    Cách 2: */
+  transform: translateY(-40px);
+}
+.blog-idea:hover .chunho{
+  transform: scale(1);
+  top:50%;
+}
+.blog-idea:hover .hinhvuong{
+  transform: scale(1);
+  opacity: 1;
+}
+.blog-idea:hover .gradient{
+  opacity: 0.35;
+}
+
+.blog-idea img { transform: scale(1);
+}
+#row_ideas .blog-idea{
+    margin: 10px auto;
+}

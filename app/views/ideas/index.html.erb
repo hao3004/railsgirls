@@ -1,20 +1,21 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Ideas</h1>
-
-<% @ideas.in_groups_of(3) do |group| %>
-  <div class="row">
-    <% group.compact.each do |idea| %>
-      <div class="col-md-4">
-        <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>
-        <h3 class="text-center"><%= link_to idea.name, idea %></h3>
-        <p><%= idea.description.slice(0, 150) %>...</p>
-        <div class="text-center">
-            <%= link_to 'Edit', edit_idea_path(idea), class:'btn btn-warning' %>
-            <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+<div class="container-fluid" id="row_ideas">
+    <div class="row">
+        <% @ideas.each do |idea| %>
+          <div class="col-md-4">
+            <div class="blog-idea">
+                    <%= image_tag idea.picture_url, width: '100%' if idea.picture.present?%>
+                    <div class="xam"></div>
+                    <div class="gradient"></div>
+                    <div class="hinhvuong"></div>
+                    <div class="chuto"><%= link_to idea.name, idea %></div>
+                    <div class="chunho">
+                        <%= link_to 'Edit', edit_idea_path(idea), class:'btn btn-warning' %>
+                        <%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div> <!--end container-fluid -->
 

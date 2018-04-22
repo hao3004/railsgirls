@@ -14,3 +14,15 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+window.onscroll = function() {myFunction()};
+
+var blogmenu = document.getElementById("blog-menu");
+var sticky = blogmenu.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    blogmenu.classList.add("sticky")
+  } else {
+    blogmenu.classList.remove("sticky");
+  }
+}
