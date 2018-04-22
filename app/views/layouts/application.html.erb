@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsgirls</title>
+    <title>Isonative.com | Share your passion</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
@@ -33,7 +33,7 @@
                       <!-- Account -->
                       <p class="navbar-text pull-right">
                       <% if user_signed_in? %>
-                        Logged in as <strong><%= current_user.email %></strong>.
+                         <strong><%= current_user.email %></strong><br>
                         <%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %> |
                         <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
                       <% else %>
@@ -44,6 +44,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="bloger-header__banner text-center">
             <div class="row" id="bloger-header__banner">
                 <!-- Logo & Banner -->

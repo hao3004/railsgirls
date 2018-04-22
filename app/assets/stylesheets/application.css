@@ -16,7 +16,7 @@
 body {
     padding:0;
     margin: 0;
-    font-family: Montserrat
+    font-family: Montserrat;
 }
 #bloger-header{
     background: #000;
@@ -109,3 +109,21 @@ ul li {
     margin: 20px 0
 }
 .field3{ padding-left:60px;}
+.header__time{
+    margin-top: 10px;
+}
+
+.container-create-box{
+    background: black;
+    padding: 40px 10% 40px 10%;
+    margin: 20px;
+}
+.new-idea-label,
+.signup-box h2,
+.login-box h2 {
+    color: #fb8e1a;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 45px;
+}
+label { color: white}
