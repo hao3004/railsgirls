@@ -11,5 +11,7 @@ ActiveAdmin.register Idea do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
+    ActiveAdmin.register Idea do
+      permit_params :name, :description, :picture
+    end
 end
